@@ -32,8 +32,8 @@ httpServer.listen(port, () => {
 });
 const httpsServer = https.createServer(
   {
-    key: fs.readFileSync(path.resolve(__dirname, "./ssl/key.pem")),
-    cert: fs.readFileSync(path.resolve(__dirname, "./ssl/cert.pem")),
+    key: fs.readFileSync(path.resolve(__dirname, "/etc/letsencrypt/live/codebugged.com/privkey.pem")),
+    cert: fs.readFileSync(path.resolve(__dirname, "/etc/letsencrypt/live/codebugged.com/cert.pem")),
   },
   app
 );
